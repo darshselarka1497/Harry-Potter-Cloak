@@ -41,13 +41,13 @@ while(cap.isOpened()):
 
     mask2 = cv2.bitwise_not(mask1)
 
-    res1 = cv2.bitwise_and(img,img,mask1=mask2)
+    res1 = cv2.bitwise_and(img,img,mask=mask2)
 
     res2 = cv2.bitwise_and(background,background,mask = mask1)
 
     #generating final output
 
-    foutput = cv2.addWeighted(res1,res2,1,0)
+    foutput = cv2.addWeighted(res1,1,res2,1,0)
     output.write(foutput)
     cv2.imshow("magic",foutput)
     cv2.waitKey(1)
