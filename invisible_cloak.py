@@ -40,3 +40,5 @@ while(cap.isOpened()):
     mask1 = cv2.morphologyEx(mask1, cv2.MORPH_DILATE, np.ones((3,3),np.unit8))
 
     mask2 = cv2.bitwise_not(mask1)
+
+    res1 = cv2.bitwise_and(img,img,mask1=mask2)
