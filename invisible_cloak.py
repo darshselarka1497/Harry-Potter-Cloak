@@ -44,3 +44,7 @@ while(cap.isOpened()):
     res1 = cv2.bitwise_and(img,img,mask1=mask2)
 
     res2 = cv2.bitwise_and(background,background,mask = mask1)
+
+    #generating final output
+
+    
