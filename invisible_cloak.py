@@ -42,3 +42,5 @@ while(cap.isOpened()):
     mask2 = cv2.bitwise_not(mask1)
 
     res1 = cv2.bitwise_and(img,img,mask1=mask2)
+
+    res2 = cv2.bitwise_and(background,background,mask = mask1)
