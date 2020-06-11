@@ -49,7 +49,7 @@ while(cap.isOpened()):
 
     foutput = cv2.addWeighted(res1,1,res2,1,0)
     output.write(foutput)
-    cv2.imshow("magic",foutput)
+    cv2.imshow("Invisible Cloak!!",foutput)
     cv2.waitKey(1)
 
 cap.release()
