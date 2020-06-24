@@ -49,8 +49,12 @@ while(cap.isOpened()):
 
     foutput = cv2.addWeighted(res1,1,res2,1,0)
     output.write(foutput)
-    cv2.imshow("Invisible Cloak!!",foutput)
+    cv2.imshow("Harry Potter Invisible Cloak - Darsh",foutput)
     cv2.waitKey(1)
+    if cv2.waitKey(33)==27:
+        cap.release()
+        output.release()
+        cv2.destroyAllWindows()
 
 cap.release()
 output.release()
